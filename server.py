@@ -1,4 +1,4 @@
-from message import encapsulate, decapsulate
+from packet import Packet
 from socket import *
 import time
 
@@ -10,10 +10,12 @@ print('The server is ready to receive messages')
 print('---------------------------------------')
 while True:
     data, addr = socket.recvfrom(2048)
-    seq, mesg = decapsulate(data.decode())
+
+    packet = Packet()
+    packet.decapsulate(data.decode())
 
     print(f'{addr[0]}:{addr[1]}')
-    print(seq, mesg)
+    print(packet.seq, packet.mesg)
 
-    socket.sendto(encapsulate(seq, mesg).encode(), addr)
+    socket.sendto(packet.encapsulate().encode(), addr)
     print('---------------------------------------')

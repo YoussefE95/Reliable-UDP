@@ -1,4 +1,4 @@
-from message import encapsulate, decapsulate
+from packet import Packet
 from socket import *
 import time
 
@@ -6,20 +6,32 @@ socket = socket(AF_INET, SOCK_DGRAM)
 window = 10
 timeout = 60
 
-def send(mesg, addr, port, seqRange):
-    for seq in seqRange:
-        socket.sendto(encapsulate(seq, mesg).encode(), (addr, port))
+def batch(seq_range, mesg):
+    packets = []
 
-def recv(batch):
-    while(len(batch) > 0):
-        start = time.perf_counter()
-        while(len(batch) > 0 and time.perf_counter() - start < timeout):
-            data, addr = socket.recvfrom(2048)
-            ack, mesg = decapsulate(data.decode())
-     
-            if (ack in batch):
-                batch.remove(ack)
-                print(ack, mesg)
+    for seq in seq_range:
+        packets.append(Packet(seq, 0, mesg))
+
+    return packets
+
+def send(packets, addr, port):
+    for packet in packets:
+        socket.sendto(packet.encapsulate().encode(), (addr, port))
+
+def recv(packets):
+    start = time.perf_counter()
+
+    while(len(packets) > 0 and time.perf_counter() - start < timeout):
+        data, addr = socket.recvfrom(2048)
+        packet = Packet(data.decode())
+
+        if (packet == packets[0]):
+            packets.remove(packet)
+            print(packet)
+        elif (packet in packets[1:]):
+            index = packets.index(packet)
+            packets = packets[index:]
+            print(packets[0:index])
 
 def main():
     dest = input('Destination: ')
@@ -31,15 +43,16 @@ def main():
 
     print('\n-------------------------------------------')
     for i in range(0, total, window):
-        batchLength = i + window
+        batch_len = i + window
 
-        if (batchLength > total):
-            batchLength = total
+        if (batch_len > total):
+            batch_len = total
 
-        seqRange = range(i, batchLength)
+        packets = batch(range(i, batch_len), mesg)
 
-        send(mesg, addr, port, seqRange)
-        recv(list(seqRange))
+        while(len(packets) > 0):
+            send(packets, addr, port)
+            recv(packets)
         print('-------------------------------------------')
 
     socket.close()
