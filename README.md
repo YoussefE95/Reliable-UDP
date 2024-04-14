@@ -30,9 +30,15 @@ Number times to send: 10
 The purpose of this code is to build on top of UDP by adding extra headers to create more 
 reliability of ensuring messages are being sent.
 
-# Install NetEM
+# Install NetEM (Network Emulator)
 ```
-sudo apt-get ...
+#install netem
+sudo apt-get install iproute2
+
+#show your IP interfaces 
+ip address show
+
+#choose an IP interface to use for upcoming commands (e.g enp7s0)
 ```
 
 # Tests and their output
@@ -44,22 +50,32 @@ Message: Howdy
 Number times to send: 100
 ```
 ### client and server output:
-<insert image here>
+![alt text](./outputs/Condition1.png?raw=true)
 
 ## Condition 2.1 (Artificial Latency, No Loss) 
-- Add enough delay time using NetEm to trigger your timeout timer and generate 
-conditions for retransmission. 
+```
+# Add delay time to trigger: timeouts and retransmissions (8000ms = 8 seconds)
+# Example with (IP Interface: enp7s0)
+sudo tc qdisc add dev enp7s0 root netem delay 250ms
 
+# Example with (IP Interface: lo)
+sudo tc qdisc add dev lo root netem delay 8000ms
+```
 ### client and server output:
 Note: output should show timeout and retransmissions
 <insert image here>
 
 ## Condition 2.2 (No Latency, Artificial Loss) 
-- Add 10% packet loss using NetEm to trigger retransmissions. 
-
 ```
+# Add 10% packet loss using NetEm to trigger retransmissions
+sudo tc qdisc add dev enp7s0 root netem loss 10%
 ```
 
+IMPORTANT: Please remember to disable the network impairments after tests are done:
+```
+# Stopping Network Impairments
+sudo tc qdisc del dev enp7s0 root netem
+```
 ### client and server output:
 Note: output should show retransmissions timeout and retransmissions
 <insert image here>
