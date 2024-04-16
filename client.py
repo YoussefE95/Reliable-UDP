@@ -3,13 +3,13 @@ from socket import *
 import time
 
 socket = socket(AF_INET, SOCK_DGRAM)
-window = 10
-timeout = 60
-
 socket.settimeout(5)
+window = 10
 
 def batch(start, end, mesg):
     packets = []
+
+    print(f'Building batch in range {start}-{end}')
 
     for seq in range(start, end):
         packets.append(Packet(seq, end, 0, mesg))

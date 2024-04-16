@@ -16,14 +16,15 @@ while True:
     packet = Packet()
     packet.decapsulate(data.decode())
 
-    print(f'{addr[0]}:{addr[1]}')
-    print(packet.seq, packet.end, packet.flag, packet.mesg)
-
     if (packet.seq == current):
+        print(f'{addr[0]}:{addr[1]}')
+        print(packet.seq, packet.end, packet.flag, packet.mesg)
+        print('---------------------------------------')
         current += 1
+    elif (packet.seq < current):
+        continue
     else:
         packet.seq = current
         packet.flag = 1
 
     socket.sendto(packet.encapsulate().encode(), addr)
-    print('---------------------------------------')
