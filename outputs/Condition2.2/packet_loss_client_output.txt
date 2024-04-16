@@ -1,0 +1,217 @@
+
+Reliable-UDP on  youssef [!] 
+ py client.py
+Destination: localhost:12000
+Message: Howdy
+Number times to send: 120
+
+-------------------------------------------
+Building batch in range 0-10
+0 10 0 Howdy
+1 10 0 Howdy
+3 10 1 Howdy
+Building batch in range 3-10
+3 10 1 Howdy
+3 10 1 Howdy
+3 10 1 Howdy
+3 10 1 Howdy
+3 10 1 Howdy
+Timeout
+3 10 0 Howdy
+4 10 0 Howdy
+5 10 0 Howdy
+6 10 0 Howdy
+7 10 0 Howdy
+8 10 0 Howdy
+9 10 0 Howdy
+-------------------------------------------
+Building batch in range 10-20
+10 20 0 Howdy
+11 20 0 Howdy
+12 20 0 Howdy
+13 20 0 Howdy
+14 20 1 Howdy
+14 20 1 Howdy
+14 20 1 Howdy
+14 20 1 Howdy
+Timeout
+14 20 0 Howdy
+15 20 0 Howdy
+16 20 0 Howdy
+17 20 0 Howdy
+18 20 0 Howdy
+19 20 0 Howdy
+-------------------------------------------
+Building batch in range 20-30
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+Timeout
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+20 30 1 Howdy
+Timeout
+20 30 0 Howdy
+21 30 0 Howdy
+22 30 0 Howdy
+23 30 0 Howdy
+24 30 0 Howdy
+25 30 1 Howdy
+25 30 1 Howdy
+25 30 1 Howdy
+25 30 1 Howdy
+Timeout
+25 30 0 Howdy
+26 30 0 Howdy
+27 30 1 Howdy
+Timeout
+27 30 0 Howdy
+28 30 0 Howdy
+29 30 0 Howdy
+-------------------------------------------
+Building batch in range 30-40
+30 40 0 Howdy
+31 40 0 Howdy
+33 40 0 Howdy
+35 40 0 Howdy
+36 40 0 Howdy
+37 40 0 Howdy
+38 40 0 Howdy
+39 40 0 Howdy
+-------------------------------------------
+Building batch in range 40-50
+40 50 0 Howdy
+41 50 0 Howdy
+42 50 0 Howdy
+43 50 0 Howdy
+44 50 1 Howdy
+44 50 1 Howdy
+44 50 1 Howdy
+44 50 1 Howdy
+Timeout
+44 50 0 Howdy
+45 50 0 Howdy
+46 50 0 Howdy
+47 50 0 Howdy
+48 50 0 Howdy
+49 50 0 Howdy
+-------------------------------------------
+Building batch in range 50-60
+50 60 0 Howdy
+51 60 0 Howdy
+52 60 1 Howdy
+52 60 1 Howdy
+52 60 1 Howdy
+52 60 1 Howdy
+Timeout
+52 60 0 Howdy
+53 60 0 Howdy
+55 60 0 Howdy
+56 60 0 Howdy
+57 60 0 Howdy
+58 60 0 Howdy
+59 60 0 Howdy
+-------------------------------------------
+Building batch in range 60-70
+60 70 0 Howdy
+61 70 0 Howdy
+62 70 0 Howdy
+64 70 0 Howdy
+65 70 0 Howdy
+66 70 0 Howdy
+67 70 0 Howdy
+68 70 0 Howdy
+69 70 0 Howdy
+-------------------------------------------
+Building batch in range 70-80
+70 80 0 Howdy
+71 80 0 Howdy
+72 80 0 Howdy
+73 80 0 Howdy
+74 80 0 Howdy
+75 80 1 Howdy
+75 80 1 Howdy
+75 80 1 Howdy
+75 80 1 Howdy
+Timeout
+75 80 0 Howdy
+76 80 0 Howdy
+77 80 0 Howdy
+78 80 0 Howdy
+79 80 0 Howdy
+-------------------------------------------
+Building batch in range 80-90
+81 90 0 Howdy
+82 90 0 Howdy
+83 90 0 Howdy
+84 90 1 Howdy
+84 90 1 Howdy
+84 90 1 Howdy
+84 90 1 Howdy
+Timeout
+84 90 0 Howdy
+85 90 0 Howdy
+87 90 0 Howdy
+88 90 0 Howdy
+Timeout
+89 90 0 Howdy
+-------------------------------------------
+Building batch in range 90-100
+90 100 0 Howdy
+91 100 1 Howdy
+91 100 1 Howdy
+91 100 1 Howdy
+91 100 1 Howdy
+91 100 1 Howdy
+Timeout
+91 100 0 Howdy
+92 100 0 Howdy
+93 100 0 Howdy
+94 100 0 Howdy
+95 100 0 Howdy
+96 100 0 Howdy
+97 100 0 Howdy
+98 100 0 Howdy
+99 100 0 Howdy
+-------------------------------------------
+Building batch in range 100-110
+100 110 0 Howdy
+103 110 0 Howdy
+104 110 1 Howdy
+104 110 1 Howdy
+104 110 1 Howdy
+104 110 1 Howdy
+104 110 1 Howdy
+Timeout
+104 110 1 Howdy
+104 110 1 Howdy
+104 110 1 Howdy
+104 110 1 Howdy
+Timeout
+104 110 0 Howdy
+105 110 0 Howdy
+106 110 0 Howdy
+107 110 0 Howdy
+109 110 0 Howdy
+-------------------------------------------
+Building batch in range 110-120
+110 120 0 Howdy
+111 120 0 Howdy
+112 120 0 Howdy
+113 120 0 Howdy
+114 120 0 Howdy
+115 120 0 Howdy
+117 120 0 Howdy
+118 120 0 Howdy
+119 120 0 Howdy
+-------------------------------------------

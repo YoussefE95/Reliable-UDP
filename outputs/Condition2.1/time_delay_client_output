@@ -1,0 +1,157 @@
+Reliable-UDP on  youssef [!] 
+ py client.py
+Destination: localhost:12000
+Message: Howdy, partner!
+Number times to send: 100
+
+-------------------------------------------
+Building batch in range 0-10
+Timeout
+Timeout
+Timeout
+0 10 0 Howdy, partner!
+1 10 0 Howdy, partner!
+2 10 0 Howdy, partner!
+3 10 0 Howdy, partner!
+4 10 0 Howdy, partner!
+5 10 0 Howdy, partner!
+6 10 0 Howdy, partner!
+7 10 0 Howdy, partner!
+8 10 0 Howdy, partner!
+9 10 0 Howdy, partner!
+-------------------------------------------
+Building batch in range 10-20
+Timeout
+Timeout
+Timeout
+10 20 0 Howdy, partner!
+11 20 0 Howdy, partner!
+12 20 0 Howdy, partner!
+13 20 0 Howdy, partner!
+14 20 0 Howdy, partner!
+15 20 0 Howdy, partner!
+16 20 0 Howdy, partner!
+17 20 0 Howdy, partner!
+18 20 0 Howdy, partner!
+19 20 0 Howdy, partner!
+-------------------------------------------
+Building batch in range 20-30
+Timeout
+Timeout
+Timeout
+20 30 0 Howdy, partner!
+21 30 0 Howdy, partner!
+22 30 0 Howdy, partner!
+23 30 0 Howdy, partner!
+24 30 0 Howdy, partner!
+25 30 0 Howdy, partner!
+26 30 0 Howdy, partner!
+27 30 0 Howdy, partner!
+28 30 0 Howdy, partner!
+29 30 0 Howdy, partner!
+-------------------------------------------
+Building batch in range 30-40
+Timeout
+Timeout
+Timeout
+30 40 0 Howdy, partner!
+31 40 0 Howdy, partner!
+32 40 0 Howdy, partner!
+33 40 0 Howdy, partner!
+34 40 0 Howdy, partner!
+35 40 0 Howdy, partner!
+36 40 0 Howdy, partner!
+37 40 0 Howdy, partner!
+38 40 0 Howdy, partner!
+39 40 0 Howdy, partner!
+-------------------------------------------
+Building batch in range 40-50
+Timeout
+Timeout
+Timeout
+40 50 0 Howdy, partner!
+41 50 0 Howdy, partner!
+42 50 0 Howdy, partner!
+43 50 0 Howdy, partner!
+44 50 0 Howdy, partner!
+45 50 0 Howdy, partner!
+46 50 0 Howdy, partner!
+47 50 0 Howdy, partner!
+48 50 0 Howdy, partner!
+49 50 0 Howdy, partner!
+-------------------------------------------
+Building batch in range 50-60
+Timeout
+Timeout
+Timeout
+50 60 0 Howdy, partner!
+51 60 0 Howdy, partner!
+52 60 0 Howdy, partner!
+53 60 0 Howdy, partner!
+54 60 0 Howdy, partner!
+55 60 0 Howdy, partner!
+56 60 0 Howdy, partner!
+57 60 0 Howdy, partner!
+58 60 0 Howdy, partner!
+59 60 0 Howdy, partner!
+-------------------------------------------
+Building batch in range 60-70
+Timeout
+Timeout
+Timeout
+60 70 0 Howdy, partner!
+61 70 0 Howdy, partner!
+62 70 0 Howdy, partner!
+63 70 0 Howdy, partner!
+64 70 0 Howdy, partner!
+65 70 0 Howdy, partner!
+66 70 0 Howdy, partner!
+67 70 0 Howdy, partner!
+68 70 0 Howdy, partner!
+69 70 0 Howdy, partner!
+-------------------------------------------
+Building batch in range 70-80
+Timeout
+Timeout
+Timeout
+70 80 0 Howdy, partner!
+71 80 0 Howdy, partner!
+72 80 0 Howdy, partner!
+73 80 0 Howdy, partner!
+74 80 0 Howdy, partner!
+75 80 0 Howdy, partner!
+76 80 0 Howdy, partner!
+77 80 0 Howdy, partner!
+78 80 0 Howdy, partner!
+79 80 0 Howdy, partner!
+-------------------------------------------
+Building batch in range 80-90
+Timeout
+Timeout
+Timeout
+80 90 0 Howdy, partner!
+81 90 0 Howdy, partner!
+82 90 0 Howdy, partner!
+83 90 0 Howdy, partner!
+84 90 0 Howdy, partner!
+85 90 0 Howdy, partner!
+86 90 0 Howdy, partner!
+87 90 0 Howdy, partner!
+88 90 0 Howdy, partner!
+89 90 0 Howdy, partner!
+-------------------------------------------
+Building batch in range 90-100
+Timeout
+Timeout
+Timeout
+90 100 0 Howdy, partner!
+91 100 0 Howdy, partner!
+92 100 0 Howdy, partner!
+93 100 0 Howdy, partner!
+94 100 0 Howdy, partner!
+95 100 0 Howdy, partner!
+96 100 0 Howdy, partner!
+97 100 0 Howdy, partner!
+98 100 0 Howdy, partner!
+99 100 0 Howdy, partner!
+-------------------------------------------
