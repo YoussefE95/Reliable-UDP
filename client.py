@@ -32,7 +32,8 @@ def recv(packets):
             print(packet.seq, packet.end, packet.flag, packet.mesg)
 
             if (packet.flag == 1):
-                packets = batch(packet.seq, packet.end, packet.mesg)
+                if (packet.seq != seq_nums[0]):
+                    packets = batch(packet.seq, packet.end, packet.mesg)
             elif (packet.seq in seq_nums):
                 for j in range(0, seq_nums.index(packet.seq) + 1):
                     packets.pop(0)
