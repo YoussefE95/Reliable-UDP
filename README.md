@@ -13,7 +13,7 @@ Message:
 Number times to send: 
 ```
 Destination example: `x.x.x.x:12000`
-Message example: `Hello!`
+Message example: `Howdy!`
 Number times example: `10`
 
 Note: hit `Enter` after each input
@@ -27,8 +27,7 @@ Number times to send: 10
 ```
 
 # Purpose of this code
-The purpose of this code is to build on top of UDP by adding extra headers to create more 
-reliability of ensuring messages are being sent.
+The purpose of this code is to build on top of UDP by adding extra headers to create more reliability of ensuring messages are being sent.
 
 # Install NetEM (Network Emulator)
 ```
@@ -50,7 +49,7 @@ Message: Howdy
 Number times to send: 100
 ```
 ### client and server output:
-![alt text](./outputs/Condition1.png?raw=true)
+![](./outputs/Condition1/condition1.png?raw=true)
 
 ## Condition 2.1 (Artificial Latency, No Loss) 
 ```
@@ -63,7 +62,10 @@ sudo tc qdisc add dev lo root netem delay 8000ms
 ```
 ### client and server output:
 Note: output should show timeout and retransmissions
-<insert image here>
+![](./outputs/Condition2.1/condition2-1.png?raw=true)
+
+Our entire output can be located here on Github:
+https://github.com/YoussefE95/Reliable-UDP/tree/master/outputs/Condition1
 
 ## Condition 2.2 (No Latency, Artificial Loss) 
 ```
@@ -78,7 +80,7 @@ sudo tc qdisc del dev enp7s0 root netem
 ```
 ### client and server output:
 Note: output should show retransmissions timeout and retransmissions
-<insert image here>
+![](./outputs/Condition2.2/condition2-2.png?raw=true)
 
 # Architecture/Design
 client.py
